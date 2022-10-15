@@ -15,17 +15,17 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Shooter extends SubsystemBase {
 
-  // Flywheels (CAN)
+  // Flywheels
   private WPI_TalonSRX flywheelLow = new WPI_TalonSRX(6);
   private WPI_TalonSRX flywheelHigh = new WPI_TalonSRX(5);
 
   private MotorControllerGroup flywheels = new MotorControllerGroup(flywheelLow, flywheelHigh);
 
-  // Feeder (PWM)
+  // Feeder
   private WPI_TalonSRX feeder = new WPI_TalonSRX(7);
 
-  // Lift (PWM)
-  private WPI_TalonSRX lift = new WPI_TalonSRX(8); // TODO: Verify channel number
+  // Lift
+  private WPI_TalonSRX lift = new WPI_TalonSRX(8);
 
   /** Creates a new ExampleSubsystem. */
   public Shooter() {}
@@ -52,8 +52,7 @@ public class Shooter extends SubsystemBase {
    * Run the window motor for a single revolution (measured by time).
    */
   public void setFeeder(double power) {
-    // feeder.setExpiration(1); // TODO: Determine expiration time
-    feeder.set(power); // TODO: Verify speed of feeder
+    feeder.set(power);
   }
 
   /**

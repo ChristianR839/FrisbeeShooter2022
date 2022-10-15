@@ -19,7 +19,7 @@ public class LiftUp extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    shooter.liftAngle(-0.5); // TODO: Verify speed of lift
+    shooter.liftAngle(-0.5);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
